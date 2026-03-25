@@ -1,0 +1,22 @@
+{
+    "mm_webforms_form": {
+        "column": {
+            "zoho_crm_is_lead_enabled": true,
+            "zoho_crm_email_field_id": true,
+            "zoho_crm_lead_owner": true,
+            "zoho_crm_lead_source": true,
+            "zoho_crm_map_fields_serialized": true,
+            "zoho_desk_is_ticket_enabled": true,
+            "zoho_desk_email_field_id": true,
+            "zoho_desk_contact_id": true,
+            "zoho_desk_department_id": true,
+            "zoho_desk_ticket_status": true,
+            "zoho_desk_ticket_owner": true,
+            "zoho_desk_ticket_channel": true,
+            "zoho_desk_ticket_classification": true,
+            "zoho_desk_ticket_priority": true,
+            "zoho_desk_ticket_language": true,
+            "zoho_desk_map_fields_serialized": true
+        }
+    }
+}

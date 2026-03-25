@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageMe
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MageMe.com license that is
+ * available through the world-wide-web at this URL:
+ * https://mageme.com/license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to a newer
+ * version in the future.
+ *
+ * Copyright (c) MageMe (https://mageme.com)
+ **/
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="mm_webforms_form" resource="default" engine="innodb">
+        <!-- Zoho CRM Settings -->
+        <column xsi:type="boolean" name="zoho_crm_is_lead_enabled" nullable="false" default="0" comment="Zoho CRM Lead enabled"/>
+        <column xsi:type="int" name="zoho_crm_email_field_id" unsigned="true" nullable="true" comment="Zoho CRM Email Override"/>
+        <column xsi:type="text" name="zoho_crm_lead_owner" nullable="true" comment="Zoho CRM Lead Owner"/>
+        <column xsi:type="text" name="zoho_crm_lead_source" nullable="true" comment="Zoho CRM Lead Source"/>
+        <column xsi:type="text" name="zoho_crm_map_fields_serialized" nullable="true" comment="Zoho CRM Map Fields in JSON"/>
+
+        <!-- Zoho Desk Settings -->
+        <column xsi:type="boolean" name="zoho_desk_is_ticket_enabled" nullable="false" default="0" comment="Zoho Desk Ticket enabled"/>
+        <column xsi:type="int" name="zoho_desk_email_field_id" unsigned="true" nullable="true" comment="Zoho Desk Email Override"/>
+        <column xsi:type="text" name="zoho_desk_contact_id" nullable="true" comment="Zoho Desk Contact"/>
+        <column xsi:type="text" name="zoho_desk_department_id" nullable="true" comment="Zoho Desk Department"/>
+        <column xsi:type="text" name="zoho_desk_ticket_status" nullable="true" comment="Zoho Desk Ticket Status"/>
+        <column xsi:type="text" name="zoho_desk_ticket_owner" nullable="true" comment="Zoho Desk Ticket Owner"/>
+        <column xsi:type="text" name="zoho_desk_ticket_channel" nullable="true" comment="Zoho Desk Ticket Channel"/>
+        <column xsi:type="text" name="zoho_desk_ticket_classification" nullable="true" comment="Zoho Desk Ticket Classification"/>
+        <column xsi:type="text" name="zoho_desk_ticket_priority" nullable="true" comment="Zoho Desk Ticket Priority"/>
+        <column xsi:type="text" name="zoho_desk_ticket_language" nullable="true" comment="Zoho Desk Ticket Language"/>
+        <column xsi:type="text" name="zoho_desk_map_fields_serialized" nullable="true" comment="Zoho Desk Map Fields in JSON"/>
+    </table>
+
+</schema>
