@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mageme/module-webforms-3-zoho.svg)](https://packagist.org/packages/mageme/module-webforms-3-zoho)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/mageme/module-webforms-3-zoho.svg)](https://packagist.org/packages/mageme/module-webforms-3-zoho)
-[![License](https://img.shields.io/packagist/l/mageme/module-webforms-3-zoho.svg)](https://mageme.com/license/)
+[![License: Proprietary](https://img.shields.io/badge/license-proprietary-blue.svg)](https://mageme.com/license/)
 
 Push Magento 2 form data to Zoho CRM and Zoho Desk from a single module. This free add-on for [MageMe WebForms](https://mageme.com/magento-2-form-builder.html) creates CRM leads and helpdesk tickets through Zoho's REST APIs with OAuth 2.0 authentication and automatic token management.
 
