@@ -24,6 +24,7 @@ use MageMe\WebForms\Helper\Result\PostHelper;
 use MageMe\WebFormsZoho\Helper\Zoho\Crm\AddLead;
 use MageMe\WebFormsZoho\Helper\Zoho\Desk\AddTicket;
 use Magento\Framework\Exception\NoSuchEntityException;
+use Psr\Log\LoggerInterface;
 
 class PostResult
 {
@@ -35,15 +36,21 @@ class PostResult
      * @var AddTicket
      */
     private $addTicket;
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
 
     /**
      * @param AddTicket $addTicket
      * @param AddLead $addLead
+     * @param LoggerInterface $logger
      */
-    public function __construct(AddTicket $addTicket, AddLead $addLead)
+    public function __construct(AddTicket $addTicket, AddLead $addLead, LoggerInterface $logger)
     {
         $this->addLead = $addLead;
         $this->addTicket = $addTicket;
+        $this->logger = $logger;
     }
 
     /**
@@ -61,11 +68,15 @@ class PostResult
             return $data;
         }
         $result = $data['model'];
-        if ($form->getZohoCrmIsLeadEnabled()) {
-            $this->addLead->execute($result);
-        }
-        if ($form->getZohoDeskIsTicketEnabled()) {
-            $this->addTicket->execute($result);
+        try {
+            if ($form->getZohoCrmIsLeadEnabled()) {
+                $this->addLead->execute($result);
+            }
+            if ($form->getZohoDeskIsTicketEnabled()) {
+                $this->addTicket->execute($result);
+            }
+        } catch (\Throwable $e) {
+            $this->logger->error('WebForms Zoho integration failed for result #' . $result->getId() . ': ' . $e->getMessage());
         }
         return $data;
     }

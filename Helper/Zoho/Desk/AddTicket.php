@@ -136,7 +136,7 @@ class AddTicket
     {
         $values  = $result->getFieldArray();
         $emailId = $form->getZohoDeskEmailFieldId();
-        $email   = $values[$emailId] ?? '';
+        $email   = $emailId !== null ? ($values[$emailId] ?? '') : '';
         if ($email) {
             return $email;
         }
