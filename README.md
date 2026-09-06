@@ -1,7 +1,7 @@
 # MageMe WebForms Zoho for Magento 2
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mageme/module-webforms-3-zoho.svg?style=flat-square)](https://packagist.org/packages/mageme/module-webforms-3-zoho)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/mageme/module-webforms-3-zoho.svg?style=flat-square)](https://packagist.org/packages/mageme/module-webforms-3-zoho)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mageme/module-webforms-addon-zoho.svg?style=flat-square)](https://packagist.org/packages/mageme/module-webforms-addon-zoho)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/mageme/module-webforms-addon-zoho.svg?style=flat-square)](https://packagist.org/packages/mageme/module-webforms-addon-zoho)
 [![Magento](https://img.shields.io/badge/Magento-2.4.x-EE672F.svg?style=flat-square)](https://magento.com)
 [![PHP](https://img.shields.io/badge/PHP-7.4%20–%208.5-777BB4.svg?style=flat-square)](https://php.net)
 [![License](https://img.shields.io/badge/license-MageMe%20EULA-blue.svg?style=flat-square)](https://mageme.com/license/)
@@ -30,7 +30,7 @@ Push Magento 2 form data to Zoho CRM and Zoho Desk from a single module. This fr
 ## Installation
 
 ```
-composer require mageme/module-webforms-3-zoho
+composer require mageme/module-webforms-addon-zoho
 bin/magento setup:upgrade
 bin/magento cache:flush
 ```
@@ -45,13 +45,13 @@ bin/magento cache:flush
 
 Complete your Magento 2 form integration stack:
 
-- [Salesforce](https://github.com/mageme/module-webforms-3-salesforce) — create Salesforce leads with campaign tracking
-- [HubSpot](https://github.com/mageme/module-webforms-3-hubspot) — sync contacts, companies, and tickets
-- [Freshdesk](https://github.com/mageme/module-webforms-3-freshdesk) — create support tickets with agent routing
-- [Zendesk](https://github.com/mageme/module-webforms-3-zendesk) — create tickets with custom field types
-- [Klaviyo](https://github.com/mageme/module-webforms-3-klaviyo) — build profiles and grow your email lists
-- [Mailchimp](https://github.com/mageme/module-webforms-3-mailchimp) — subscribe customers to audiences
-- [Zapier](https://github.com/mageme/module-webforms-3-zapier) — connect forms to 7000+ apps
+- [Salesforce](https://github.com/mageme/module-webforms-addon-salesforce) — create Salesforce leads with campaign tracking
+- [HubSpot](https://github.com/mageme/module-webforms-addon-hubspot) — sync contacts, companies, and tickets
+- [Freshdesk](https://github.com/mageme/module-webforms-addon-freshdesk) — create support tickets with agent routing
+- [Zendesk](https://github.com/mageme/module-webforms-addon-zendesk) — create tickets with custom field types
+- [Klaviyo](https://github.com/mageme/module-webforms-addon-klaviyo) — build profiles and grow your email lists
+- [Mailchimp](https://github.com/mageme/module-webforms-addon-mailchimp) — subscribe customers to audiences
+- [Zapier](https://github.com/mageme/module-webforms-addon-zapier) — connect forms to 7000+ apps
 
 ## Custom Magento development
 
@@ -62,7 +62,7 @@ Need a feature an extension doesn't cover, or a bespoke Magento build? MageMe ta
 ## Support
 
 - Documentation: [docs.mageme.com](https://docs.mageme.com)
-- Bug reports and feature requests: [GitHub Issues](https://github.com/mageme/module-webforms-3-zoho/issues)
+- Bug reports and feature requests: [GitHub Issues](https://github.com/mageme/module-webforms-addon-zoho/issues)
 
 ## License
 
