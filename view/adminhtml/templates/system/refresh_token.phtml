@@ -1,20 +1,23 @@
 <?php
-
+/**
+ * Copyright © MageMe. All rights reserved.
+ * See LICENSE for license terms, or https://mageme.com/license.
+ */
 /** @var $block RefreshToken */
 
 use MageMe\WebFormsZoho\Block\Adminhtml\System\RefreshToken;
 
 ?>
 <?php if ($block->isConfigured()) { ?>
-    <button class="scalable" type="button" id="<?= $block->getHtmlId() ?>_button" onclick="generateToken()" style="margin-top: 1rem;">
-        <span><?= __('Generate Token') ?></span>
+    <button class="scalable" type="button" id="<?= $escaper->escapeHtmlAttr($block->getHtmlId()) ?>_button" onclick="generateToken()" style="margin-top: 1rem;">
+        <span><?= $escaper->escapeHtml(__('Generate Token')) ?></span>
     </button>
 
     <script>
         function generateToken() {
-            const url = "<?= $block->getAjaxUrl(); ?>";
-            const button = document.getElementById("<?= $block->getHtmlId() ?>_button");
-            const input = document.getElementById("<?= $block->getHtmlId() ?>");
+            const url = "<?= $escaper->escapeJs($block->getAjaxUrl()); ?>";
+            const button = document.getElementById("<?= $escaper->escapeJs($block->getHtmlId()) ?>_button");
+            const input = document.getElementById("<?= $escaper->escapeJs($block->getHtmlId()) ?>");
             const xhr = new XMLHttpRequest();
             xhr.open('POST', url, true);
             xhr.responseType = 'json';
@@ -29,7 +32,7 @@ use MageMe\WebFormsZoho\Block\Adminhtml\System\RefreshToken;
                     return alert(xhr.statusText);
                 }
                 if (!xhr.response) {
-                    return alert("<?= __('Unexpected error'); ?>");
+                    return alert("<?= $escaper->escapeJs(__('Unexpected error')); ?>");
                 }
                 if (!xhr.response['success']) {
                     return alert(xhr.response['message'])
